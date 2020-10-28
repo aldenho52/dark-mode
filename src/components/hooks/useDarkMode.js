@@ -1,7 +1,9 @@
-import useLocalStorage from './useLocalStorage'
+import {useLocalStorage} from './useLocalStorage'
 
-export const useDarkMode = () => {
+const useDarkMode = (initialValue) => {
     const [darkMode, setDarkMode] = useLocalStorage('darkMode', initialValue)
 
     return [darkMode, setDarkMode]
 }
+
+export default useDarkMode
